@@ -4,13 +4,20 @@ from django.urls import reverse
 from django.shortcuts import redirect
 from studenthub.forms import PostForm
 from django.core.mail import send_mail
+from .models import dance,music,quiz,sankalp,theatre,ACM,IEEE,contact
 import json
 
 def index(request):
 	return render(request, 'studenthub/index.html')
 
 def culturalclubs(request):
-	return render(request, 'studenthub/cultural.html')
+	#d=dance.objects.get(pk=1)
+	m=music.objects.get(pk=1)
+	#q=quiz.objects.get(pk=1)
+	#s=sankalp.objects.get(pk=1)
+	#t=theatre.objects.get(pk=1)
+	context={'music':m}#'sankalp':s,'quiz':q,'theatre':t}
+	return render(request, 'studenthub/cultural.html',context)
 
 def technicalclubs(request):
 	return render(request, 'studenthub/technical.html')
@@ -20,7 +27,7 @@ def sports(request):
 
 def events(request):
 	return render(request, 'studenthub/events.html')
-	
+
 def activities(request):
 	return render(request, 'studenthub/activities.html')
 
@@ -38,14 +45,9 @@ def contact(request):
 		send_mail(sub,message,email, ['harshavamsi096@gmail.com'] )
 		response_data = {}
 		response_data['result'] = "Thanks for contacting us. We'll get back to you soon!"
-		return HttpResponse(json.dumps(response_data),content_type="application/json")	
+		return HttpResponse(json.dumps(response_data),content_type="application/json")
 	else:
-		return render(request, 'studenthub/index.html')	 
+		return render(request, 'studenthub/index.html')
 
 def register(request):
 	return HttpResponseRedirect(reverse('studenthub:index'))
-
-
-
-
-
