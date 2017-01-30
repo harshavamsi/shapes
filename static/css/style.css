@@ -459,24 +459,51 @@ body {
 	border-radius: 0px;
 	border-color: #824b07;
 	height: 60px;
+	color:white;
+}
+
+.btnacm{
+	background-color:#317ba0;
+	border-radius: 0px;
+	border-color: #317ba0;
+	color:white;
+	height:60px;
+}
+
+.btnacm:hover{
+	background-color:#000;
+	border-radius: 0px;
+	border-color: #317ba0;
+	color:white;
+	height:60px;
+}
+
+.btnsportslg{
+	background-color:#824b07;
+	border-radius: 0px;
+	border-color: #824b07;
+	height: 60px;
+	color:white;
 }
 .btnsportslg:hover{
 	background-color:#000;
 	border-radius: 0px;
 	border-color: #824b07;
 	height: 60px;
+	color:white;
 }
 
 .btntheatrelg{
 	background-color:#006699;
 	border-radius: 0px;
-	
+	color:white;
 	height: 60px;
 }
 .btntheatrelg:hover{
 	background-color:#000;
 	border-radius: 0px;
 	height: 60px;
+	color:white;
 }
 
 .btnsports:hover{

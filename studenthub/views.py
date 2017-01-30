@@ -21,12 +21,6 @@ def sports(request):
 def events(request):
 	return render(request, 'studenthub/events.html')
 	
-def activities(request):
-	return render(request, 'studenthub/activities.html')
-
-def edusoc(request):
-	return render(request, 'studenthub/edusoc.html')
-
 def contact(request):
 	if request.method == "POST":
 		name = request.POST.get('name')
@@ -42,8 +36,7 @@ def contact(request):
 	else:
 		return render(request, 'studenthub/index.html')	 
 
-def register(request):
-	return HttpResponseRedirect(reverse('studenthub:index'))
+
 
 
 
