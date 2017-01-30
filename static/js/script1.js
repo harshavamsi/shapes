@@ -228,7 +228,7 @@ function menu_focus( element, i ) {
 		}
 	}
 	
-	enable_arrows( i );
+	
 		
 	if ( i == 1 || i == 6 )
 		$('.navbar').removeClass('inv');
@@ -254,9 +254,8 @@ function menu_focus( element, i ) {
 }
 
 function enable_arrows( dataslide ) {
-	if ( dataslide != 1 ) {
-		$('#arrow-up').removeClass('disabled');
-	}
+
+
 }
 
 /*************
@@ -282,7 +281,7 @@ jQuery(document).ready(function ($) {
 	
 	//When the user clicks on the navigation links, get the data-slide attribute value of the link and pass that variable to the goToByScroll function
 	links.click(function (e) {
-		e.preventDefault();
+		
 		dataslide = $(this).attr('data-slide');
 		goToByScroll(dataslide);
 		$(".nav-collapse").collapse('hide');
@@ -359,7 +358,9 @@ jQuery(document).ready(function ($) {
 		}
 	);
 });
-
+$("#arrow-left").click(function(){
+    window.location.href = "/";
+});
 /******************
 * = Arrows click  *
 ******************/

@@ -1,4 +1,4 @@
-	{% extends 'base.html' %}{% load staticfiles %}
+	{% extends 'base1.html' %}{% load staticfiles %}
 	{% block title %}
 	Welcome
 	{% endblock %}
@@ -14,14 +14,16 @@
 			
 			<div class="nav-collapse collapse navbar-responsive-collapse">
 				<ul class="nav row">
-					<li data-slide="2" class="col-12 col-sm-4"><a id="menu-link-2" href="#slide-2" title="Next Section"><span class="fa fa-user"></span> <span class="text">ABOUT US</span></a></li>
-					<li data-slide="4" class="col-12 col-sm-4"><a id="menu-link-3" href="#slide-4" title="Next Section"><span class="fa fa-briefcase"></span> <span class="text">CLUBS</span></a></li>
-					<li data-slide="5" class="col-12 col-sm-4"><a id="menu-link-4" href="#slide-5" title="Next Section"><span class="fa fa-trophy"></span> <span class="text">SPORTS</span></a></li>
+					<li data-slide="1" class="col-12 col-sm-3"><a id="menu-link-1" href="/" title="Next Section"><span class="fa fa-home"></span> <span class="text">HOME</span></a></li>
+					<li data-slide="2" class="col-12 col-sm-3"><a id="menu-link-2" href="/#slide-2" title="Next Section"><span class="fa fa-user"></span> <span class="text">ABOUT US</span></a></li>
+					<li data-slide="4" class="col-12 col-sm-3"><a id="menu-link-3" href="/#slide-4" title="Next Section"><span class="fa fa-briefcase"></span> <span class="text">CLUBS</span></a></li>
+					<li data-slide="5" class="col-12 col-sm-3"><a id="menu-link-4" href="/#slide-5" title="Next Section"><span class="fa fa-trophy"></span> <span class="text">SPORTS</span></a></li>
 					</ul>
 					<ul class="nav row">
-					<li data-slide="7" class="col-12 col-sm-4"><a id="menu-link-6" href="#slide-7" title="Next Section"><span class="fa fa-calendar"></span> <span class="text">EVENTS</span></a></li>
-					<li data-slide="8" class="col-12 col-sm-4"><a id="menu-link-7" href="#slide-8" title="Next Section"><span class="fa fa-book"></span> <span class="text">EDUCATIONAL SOCIETIES</span></a></li>
-					<li data-slide="9" class="col-12 col-sm-4"><a id="menu-link-8" href="#slide-9" title="Next Section"><span class="fa fa-phone"></span> <span class="text">CONTACT</span></a></li>
+					<li data-slide="6" class="col-12 col-sm-3"><a id="menu-link-5" href="/#slide-6" title="Next Section"><span class="fa fa-video-camera"></span> <span class="text">ACTIVITIES</span></a></li>
+					<li data-slide="7" class="col-12 col-sm-3"><a id="menu-link-6" href="/#slide-7" title="Next Section"><span class="fa fa-calendar"></span> <span class="text">EVENTS</span></a></li>
+					<li data-slide="8" class="col-12 col-sm-3"><a id="menu-link-7" href="/#slide-8" title="Next Section"><span class="fa fa-book"></span> <span class="text">EDUCATIONAL SOCIETIES</span></a></li>
+					<li data-slide="9" class="col-12 col-sm-3"><a id="menu-link-8" href="/#slide-9" title="Next Section"><span class="fa fa-phone"></span> <span class="text">CONTACT</span></a></li>
 					</ul>
 			
 				<div class="row">
@@ -30,17 +32,12 @@
 			</div><!-- /.nav-collapse -->
 	</div><!-- /.navbar -->
 	
-		<div id="arrows">
-		<div id="arrow-up">
-			<br>
-			<span class="up font22 font-semibold" style="color:white">UP</span>
-		</div>
-	</div><!-- /.arrows -->
+	
 
 	
 	
 	<!-- === MAIN Background === -->
-	<div class="slide story" id="slide-1" data-slide="1">
+	<div class=" story" id="slide1rest" data-slide="1">
 		<div class="container">
 			<div id="home-row-1" class="row clearfix">
 				<div class="col-12">
@@ -49,11 +46,6 @@
 					<br>
 				</div><!-- /col-12 -->
 			</div><!-- /row -->
-			<div id="home-row-2" class="row clearfix">
-				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="4"><img src="{% static 'images/s02.png' %}"></div><span>PROFESSIONAL</span></div>
-				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="3"><img src="{% static 'images/s01.png' %}"></div><span>FRIENDLY</span></div>
-				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="5"><img src="{% static 'images/s03.png' %}"></div><span>SUITABLE</span></div>
-			</div><!-- /row -->
 		</div><!-- /container -->
 	</div><!-- /slide1 -->
 	
@@ -61,7 +53,7 @@
 	<div class="slide story" id="slide-2" data-slide="2">
 		<div class="container">
 			<div class="row title-row">
-				<div class="col-12 font-thin">About<span class="font-semibold"> Us</span></div>
+				<div class="col-12 font-semibold">Dance</div>
 			</div><!-- /row -->
 			<div class="row line-row">
 				<div class="hr">&nbsp;</div>
@@ -117,7 +109,7 @@
 	<div class="slide story" id="slide-4" data-slide="4">
 		<div class="container">
 			<div class="row title-row">
-				<div class="col-12 font-semibold">Clubs</div>
+				<div class="col-12 font-semibold">Music</div>
 			</div><!-- /row -->
 			<div class="row line-row">
 				<div class="hr">&nbsp;</div>
@@ -153,7 +145,7 @@
 	<div class="slide story" id="slide-5" data-slide="5">
 		<div class="container">
 			<div class="row title-row">
-				<div class="col-12 font-semibold">Sports</div>
+				<div class="col-12 font-semibold">Quiz</div>
 			</div><!-- /row -->
 			<div class="row line-row">
 				<div class="hr">&nbsp;</div>
@@ -169,12 +161,35 @@
 		</div><!-- /container -->
 	</div><!-- /slide5 -->
 	<!-- === Slide 5 === -->
-
+	<div class="slide story" id="slide-6" data-slide="6">
+		<div class="container">
+			<div class="row title-row">
+				<div class="col-12 font-semibold">Sankalp</div>
+			</div><!-- /row -->
+			<div class="row line-row">
+				<div class="hr">&nbsp;</div>
+			</div><!-- /row -->
+			<div class="row subtitle-row">
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+				<div class="col-12 col-sm-10 font-light">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. <br/><br/> The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero.</div>
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+			</div><!-- /row -->
+			<div class="row content-row">
+				<div class="col-1 col-sm-1 hidden-sm">&nbsp;</div>
+				<div class="col-12 col-sm-2"><img src="images/client01.png" alt=""></div>
+				<div class="col-12 col-sm-2"><img src="images/client02.png" alt=""></div>
+				<div class="col-12 col-sm-2"><img src="images/client03.png" alt=""></div>
+				<div class="col-12 col-sm-2"><img src="images/client04.png" alt=""></div>
+				<div class="col-12 col-sm-2"><img src="images/client05.png" alt=""></div>
+				<div class="col-1 col-sm-1 hidden-sm">&nbsp;</div>
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /slide5 -->
 	<!-- === Slide 5 === -->
 	<div class="slide story" id="slide-7" data-slide="7">
 		<div class="container">
 			<div class="row title-row">
-				<div class="col-12 font-semibold">Events</div>
+				<div class="col-12 font-semibold">Theatre</div>
 			</div><!-- /row -->
 			<div class="row line-row">
 				<div class="hr">&nbsp;</div>
@@ -189,81 +204,6 @@
 			</div><!-- /row -->
 			</div><!-- /container -->
 	</div><!-- /slide5 -->
-	<!-- === Slide 5 === -->
-	<div class="slide story" id="slide-8" data-slide="8">
-		<div class="container">
-			<div class="row title-row">
-				<div class="col-12 font-semibold">Educational <span class="font-light">Societies</span></div>
-			</div><!-- /row -->
-			<div class="row line-row">
-				<div class="hr">&nbsp;</div>
-			</div><!-- /row -->
-			<div class="row subtitle-row">
-				<div class="col-sm-1 hidden-sm">&nbsp;</div>
-				<div class="col-12 col-sm-10 font-light">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. <br/><br/> The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero.</div>
-				<div class="col-sm-1 hidden-sm">&nbsp;</div>
-			</div><!-- /row -->
-	</div><!-- /row -->
-						<div class="row">
-	<a href="{% url 'studenthub:edusoc' %}" class="btn btn-primary btn-lg btnedu">Know more</a>
-			</div><!-- /row -->
-		</div><!-- /container -->
-	</div><!-- /slide5 -->
 	
-	<!-- === Slide 6 / Contact === -->
-	<div class="slide story" id="slide-9" data-slide="9">
-		<div class="container">
-			<div class="row title-row">
-				<div class="col-12 font-light">Get in <span class="font-semibold">touch</span></div>
-			</div><!-- /row -->
-			<div class="row line-row">
-				<div class="hr">&nbsp;</div>
-			</div><!-- /row -->
-			<div class="row subtitle-row">
-				<div class="col-sm-1 hidden-sm">&nbsp;</div>
-				<div class="col-12 col-sm-10 font-light">We're always here to help :)</div>
-				<div class="col-sm-1 hidden-sm">&nbsp;</div>
-			</div><!-- /row -->
-			<div id="" class="row">
- <div class="col-lg-offset-2 col-lg-8" id="">
-<div id="success" class="font-semibold font22"></div>
-        <form action="{% url 'studenthub:contact' %}" method="POST" id="contact">
-{% csrf_token %}
-            <div class="group">
-                <input type="text" id="name" required>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <label>Name</label>
-            </div>
-
-            <div class="group">
-                <input type="text" id="email" required>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <label>Email</label>
-            </div>
-
-            <div class="group">
-                <input type="text" id="phone" required>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <label>Mobile No</label>
-            </div>
-
-            <div class="group">
-                <input type="text" id="message" required>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-                <label>Message</label>
-            </div>
-            <div class="group">
-                <center> <button type="submit" class="btn btn-lg btncontact btn-block" id="send">Send <span class="glyphicon glyphicon-send"></span></button></center>
-            </div>
-        </form>
-
-    </div>
-			</div><!-- /row -->
-		</div><!-- /container -->
-	</div><!-- /Slide 6 -->
 	
 {% endblock %}
