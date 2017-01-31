@@ -51,31 +51,79 @@
 			<div class="row line-row">
 				<div class="hr">&nbsp;</div>
 			</div><!-- /row -->
-			<div class="row subtitle-row">
-				<div class="col-12 font-thin">This is what <span class="font-semibold">we do best</span></div>
-			</div><!-- /row -->
-			<div class="row content-row">
-				<div class="col-12 col-lg-3 col-sm-6">
-					<p><i class="icon icon-eye-open"></i></p>
-					<h2 class="font-thin">Visual <span class="font-semibold">Identity</span></h2>
-					<h4 class="font-thin">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-				</div><!-- /col12 -->
-				<div class="col-12 col-lg-3 col-sm-6">
-					<p><i class="icon icon-laptop"></i></p>
-					<h2 class="font-thin">Web <span class="font-semibold">Design</span></h2>
-					<h4 class="font-thin">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-				</div><!-- /col12 -->
-				<div class="col-12 col-lg-3 col-sm-6">
-					<p><i class="icon icon-tablet"></i></p>
-					<h2 class="font-thin">Mobile <span class="font-semibold">Apps</span></h2>
-					<h4 class="font-thin">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-				</div><!-- /col12 -->
-				<div class="col-12 col-lg-3 col-sm-6">
-					<p><i class="icon icon-pencil"></i></p>
-					<h2 class="font-semibold">Development</h2>
-					<h4 class="font-thin">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-				</div><!-- /col12 -->
-			</div><!-- /row -->
+			<br>
+			<br>
+			<br>
+			<div class="row">
+<div class="col-sm-6">
+<div class="font-light font22 text-left">
+
+{{ dance.para1 }}
+<br>
+<br>
+{{dance.para2}}
+<br><br>
+{{dance.para3}}
+</div>
+</div>
+<div class="col-sm-6 font-semibold font22">
+	Contact us
+	<hr>
+<div class="text-left">
+	{{dance.head1}}
+<br>
+{{dance.head2}}
+</div>
+<br>
+Register
+<hr>
+<div id="dancesuccess" class="font-semibold font22"></div>
+        <form action="{% url 'studenthub:dancecontact' %}" method="POST" id="dancecontact">
+{% csrf_token %}
+            <div class="group">
+                <input type="text" id="dancename" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Name</label>
+            </div>
+
+            <div class="group">
+                <input type="text" id="danceemail" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Email</label>
+            </div>
+
+            <div class="group">
+                <input type="text" id="dancephone" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Mobile No</label>
+            </div>
+
+            <div class="group">
+                <input type="text" id="dancemessage" value = "'I would love to register.'" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Message</label>
+            </div>
+            <div class="group">
+                <center> <button type="submit" class="btn btn-lg btncontact btn-block" id="dancesend">Send <span class="glyphicon glyphicon-send"></span></button></center>
+            </div>
+        </form>
+</div>
+</div>
+<div class="row">
+	<div class="col-sm-6"><span class="font-semibold font22">Gautham M R</span>
+	<hr>
+	<img src='{{ dance.image1.url }}' class="img-responsive" style="height:500px;">
+	</div>
+	<div class="col-sm-6"><span class="font-semibold font22">Sujith Kumar</span>
+
+	<hr>
+	<img src='{{ dance.image2.url }}' class="img-responsive" style="height:500px;">
+	</div></div>
+</div>
 		</div><!-- /container -->
 	</div><!-- /slide2 -->
 
@@ -137,38 +185,38 @@
 <br>
 Register
 <hr>
-<div id="success" class="font-semibold font22"></div>
-        <form action="{% url 'studenthub:contact' %}" method="POST" id="contact">
+<div id="musicsuccess" class="font-semibold font22"></div>
+        <form action="{% url 'studenthub:musiccontact' %}" method="POST" id="musiccontact">
 {% csrf_token %}
             <div class="group">
-                <input type="text" id="name" required>
+                <input type="text" id="musicname" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Name</label>
             </div>
 
             <div class="group">
-                <input type="text" id="email" required>
+                <input type="text" id="musicemail" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Email</label>
             </div>
 
             <div class="group">
-                <input type="text" id="phone" required>
+                <input type="text" id="musicphone" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Mobile No</label>
             </div>
 
             <div class="group">
-                <input type="text" id="message" value = "'I would love to register.'" required>
+                <input type="text" id="musicmessage" value = "'I would love to register.'" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Message</label>
             </div>
             <div class="group">
-                <center> <button type="submit" class="btn btn-lg btncontact btn-block" id="send">Send <span class="glyphicon glyphicon-send"></span></button></center>
+                <center> <button type="submit" class="btn btn-lg btncontact btn-block" id="musicsend">Send <span class="glyphicon glyphicon-send"></span></button></center>
             </div>
         </form>
 </div>
@@ -176,12 +224,12 @@ Register
 <div class="row">
 	<div class="col-sm-6"><span class="font-semibold font22">Tejas Manjunath</span>
 	<hr>
-	<img src="{% static 'images/music/tejas.jpg' %}" class="img-responsive">
+	<img src='{{ music.image1.url }}' class="img-responsive">
 	</div>
 	<div class="col-sm-6"><span class="font-semibold font22">Vrushali Deshmukh</span>
 
 	<hr>
-	<img src="{% static 'images/music/vrushali.jpg' %}" class="img-responsive">
+	<img src='{{ music.image2.url }}' class="img-responsive">
 	</div></div>
 </div>
 		</div><!-- /container -->
@@ -218,52 +266,48 @@ Register
 
 Register
 <hr>
-<div id="success" class="font-semibold font22"></div>
-        <form action="{% url 'studenthub:contact' %}" method="POST" id="contact">
+<div id="quizsuccess" class="font-semibold font22"></div>
+        <form action="{% url 'studenthub:quizcontact' %}" method="POST" id="quizcontact">
 {% csrf_token %}
             <div class="group">
-                <input type="text" id="name" required>
+                <input type="text" id="quizname" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Name</label>
             </div>
 
             <div class="group">
-                <input type="text" id="email" required>
+                <input type="text" id="quizemail" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Email</label>
             </div>
 
             <div class="group">
-                <input type="text" id="phone" required>
+                <input type="text" id="quizphone" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Mobile No</label>
             </div>
 
             <div class="group">
-                <input type="text" id="message" value = "'I would love to register.'" required>
+                <input type="text" id="quizmessage" value = "'I would love to register.'" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Message</label>
             </div>
             <div class="group">
-                <center> <button type="submit" class="btn btn-lg btnsportslg btn-block" id="send">Send <span class="glyphicon glyphicon-send"></span></button></center>
+                <center> <button type="submit" class="btn btn-lg btnsportslg btn-block" id="quizsend">Send <span class="glyphicon glyphicon-send"></span></button></center>
             </div>
         </form>
 </div>
 </div>
 <div class="row">
-	<div class="col-sm-6"><span class="font-semibold font22">Tejas Manjunath</span>
+	<div class="col-sm-offset-3 col-sm-6"><span class="font-semibold font22">Saloni Sikdar</span>
 	<hr>
-	<img src="{% static 'images/music/tejas.jpg' %}" class="img-responsive">
+	<img src="{{quiz.image1.url}}" class="img-responsive" style="height: 600px;">
 	</div>
-	<div class="col-sm-6"><span class="font-semibold font22">Vrushali Deshmukh</span>
-
-	<hr>
-	<img src="{% static 'images/music/vrushali.jpg' %}" class="img-responsive">
-	</div></div>
+</div>
 
 		</div><!-- /container -->
 	</div><!-- /slide5 -->
@@ -296,7 +340,7 @@ Register
 	<div class="slide story" id="slide-7" data-slide="7">
 		<div class="container">
 			<div class="row title-row">
-				<div class="col-12 font-semibold">Theatre</div>
+				<div class="col-12 font-semibold">Theatre - Mangobites</div>
 			</div><!-- /row -->
 			<div class="row line-row">
 				<div class="hr">&nbsp;</div>
@@ -325,38 +369,38 @@ Register
 <br>
 Register
 <hr>
-<div id="success" class="font-semibold font22"></div>
-        <form action="{% url 'studenthub:contact' %}" method="POST" id="contact">
+<div id="theatresuccess" class="font-semibold font22"></div>
+        <form action="{% url 'studenthub:theatrecontact' %}" method="POST" id="theatrecontact">
 {% csrf_token %}
             <div class="group">
-                <input type="text" id="name" required>
+                <input type="text" id="theatrename" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Name</label>
             </div>
 
             <div class="group">
-                <input type="text" id="email" required>
+                <input type="text" id="theatreemail" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Email</label>
             </div>
 
             <div class="group">
-                <input type="text" id="phone" required>
+                <input type="text" id="theatrephone" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Mobile No</label>
             </div>
 
             <div class="group">
-                <input type="text" id="message" value = "'I would love to register.'" required>
+                <input type="text" id="theatremessage" value = "'I would love to register.'" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Message</label>
             </div>
             <div class="group">
-                <center> <button type="submit" class="btn btn-lg btntheatrelg btn-block" id="send">Send <span class="glyphicon glyphicon-send"></span></button></center>
+                <center> <button type="submit" class="btn btn-lg btntheatrelg btn-block" id="theatresend">Send <span class="glyphicon glyphicon-send"></span></button></center>
             </div>
         </form>
 </div>

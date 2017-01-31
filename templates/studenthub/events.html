@@ -1,4 +1,4 @@
-	{% extends 'base1.html' %}{% load staticfiles %}
+	{% extends 'base.html' %}{% load staticfiles %}
 	{% block title %}
 	Welcome
 	{% endblock %}
@@ -14,15 +14,14 @@
 			
 						<div class="nav-collapse collapse navbar-responsive-collapse">
 				<ul class="nav row">
-				<li data-slide="1" class="col-12 col-sm-4"><a id="menu-link-1" href="/#slide-1" title="Next Section"><span class="fa fa-home"></span> <span class="text">HOME</span></a></li>
-					<li data-slide="2" class="col-12 col-sm-4"><a id="menu-link-2" href="/#slide-2" title="Next Section"><span class="fa fa-user"></span> <span class="text">ABOUT US</span></a></li>
-					<li data-slide="4" class="col-12 col-sm-4"><a id="menu-link-3" href="/#slide-4" title="Next Section"><span class="fa fa-briefcase"></span> <span class="text">CLUBS</span></a></li>
+				<span data-slide="1" class="col-12 col-sm-4 homespan" style="margin-top: 8px;"><a id="menu-link-1" href="/" title="Next Section"><span class="fa fa-home "  style="margin-left: 202px;"> <span class="font-semibold">HOME</span></span></a></span>
+					<li data-slide="2" class="col-12 col-sm-4"><a id="menu-link-2" href="#slide-2" title="Next Section"><span class="fa fa-user"></span> <span class="text">ACTIVITY DAY</span></a></li>
+					<li data-slide="4" class="col-12 col-sm-4"><a id="menu-link-3" href="#slide-4" title="Next Section"><span class="fa fa-briefcase"></span> <span class="text">inGENIUS</span></a></li>
 					
 					</ul>
 					<ul class="nav row">
-					<li data-slide="5" class="col-12 col-sm-4"><a id="menu-link-4" href="/#slide-5" title="Next Section"><span class="fa fa-trophy"></span> <span class="text">SPORTS</span></a></li>
-					<li data-slide="7" class="col-12 col-sm-4"><a id="menu-link-6" href="/#slide-7" title="Next Section"><span class="fa fa-calendar"></span> <span class="text">EVENTS</span></a></li>
-					<li data-slide="9" class="col-12 col-sm-4"><a id="menu-link-8" href="/#slide-9" title="Next Section"><span class="fa fa-phone"></span> <span class="text">CONTACT</span></a></li>
+					<li data-slide="5" class="col-12 col-sm-6"><a id="menu-link-4" href="#slide-5" title="Next Section"><span class="fa fa-trophy"></span> <span class="text">MAAYA</span></a></li>
+					<li data-slide="6" class="col-12 col-sm-6"><a id="menu-link-6" href="#slide-6" title="Next Section"><span class="fa fa-calendar"></span> <span class="text">TEDX</span></a></li>
 					</ul>
 			
 				<div class="row">
@@ -58,29 +57,9 @@
 				<div class="hr">&nbsp;</div>
 			</div><!-- /row -->
 			<div class="row subtitle-row">
-				<div class="col-12 font-thin">This is what <span class="font-semibold">we do best</span></div>
-			</div><!-- /row -->
-			<div class="row content-row">
-				<div class="col-12 col-lg-3 col-sm-6">
-					<p><i class="icon icon-eye-open"></i></p>
-					<h2 class="font-thin">Visual <span class="font-semibold">Identity</span></h2>
-					<h4 class="font-thin">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-				</div><!-- /col12 -->
-				<div class="col-12 col-lg-3 col-sm-6">
-					<p><i class="icon icon-laptop"></i></p>
-					<h2 class="font-thin">Web <span class="font-semibold">Design</span></h2>
-					<h4 class="font-thin">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-				</div><!-- /col12 -->
-				<div class="col-12 col-lg-3 col-sm-6">
-					<p><i class="icon icon-tablet"></i></p>
-					<h2 class="font-thin">Mobile <span class="font-semibold">Apps</span></h2>
-					<h4 class="font-thin">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-				</div><!-- /col12 -->
-				<div class="col-12 col-lg-3 col-sm-6">
-					<p><i class="icon icon-pencil"></i></p>
-					<h2 class="font-semibold">Development</h2>
-					<h4 class="font-thin">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-				</div><!-- /col12 -->
+				
+				<div class="col-12 col-sm-12 font-light">Every even semester, PESIT-BSC hosts one of the most awaited events of the year. Activity Day, the interdepartmental events. These events be it sports or tech or cultural culminate on the epic day where every department has only one goal, “to be the best of them all”. Students work day and night before the event putting in massive amounts of time and effort to see their department on top, to be crowned interdepartmental champions!</div>
+				
 			</div><!-- /row -->
 		</div><!-- /container -->
 	</div><!-- /slide2 -->
@@ -114,29 +93,8 @@
 				<div class="hr">&nbsp;</div>
 			</div><!-- /row -->
 			<div class="row subtitle-row">
-				<div class="col-sm-1 hidden-sm">&nbsp;</div>
-				<div class="col-12 col-sm-10 font-light">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</div>
-				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+			<div class="col-12 col-sm-12 font-light">This 24-hour hackathon is the annual flagship event of the chapter and was conducted on 10th and 11th September on the college campus. It saw over 700 registrations from over 30 colleges and finally 100 teams were invited to come and compete on campus. They were offered goodie bags, meals, hi-speed WiFi, entertainment activities and unlimited coffee. Over the 24 hours, the teams worked on various projects with mentors on campus throughout the night to help them if needed. The projects varied from applications on the web and mobile to machine learning and artificial intelligence as well. Many projects were also electronics and IoT based. The winning team was from NIT Trichy.</div>
 			</div><!-- /row -->
-<div class="row">
-	<div class="col-sm-6 font-semibold"><i class="fa fa-eye fa-3x" aria-hidden="true"></i><span class="font35"> Cultural</span>
-	<hr>
-	<div class="font-light font22">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</div>
-	<br>
-	<a href="{% url 'studenthub:culturalclubs' %}" class="btn btn-primary btn-lg btnclubs">Know more</a>
-	<br>
-	</div>
-
-	<div class="col-sm-6 font-semibold"><i class="fa fa-laptop fa-3x" aria-hidden="true"></i><span class="font35"> Technical</span>
-<hr>
-	<div class="font-light font22">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</div>
-		<br>
-	<a href="{% url 'studenthub:technicalclubs' %}" class="btn btn-primary btn-lg btnclubs">Know more</a>
-	<br>
-	</div>
-
-	</div>
-</div>
 		</div><!-- /container -->
 	</div><!-- /slide4 -->
 	
@@ -150,37 +108,32 @@
 				<div class="hr">&nbsp;</div>
 			</div><!-- /row -->
 			<div class="row subtitle-row">
-				<div class="col-sm-1 hidden-sm">&nbsp;</div>
-				<div class="col-12 col-sm-10 font-light">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</div>
-				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+			<div class="col-12 col-sm-12 font-light">Maaya, the annual techno-cultural fest organised by PESIT-BSC. It brings together over 40 colleges from all over bangalore and spans over two fun filled days. The events are as diverse as the people attending the event, ranging from tech to cultural to a good old fashioned treasure hunt. Maaya as a college level fest has grown immensely in the past few year in both number of attendees and events. Maaya has always been a welcome splash of colour in a rather dull odd semester.</div>
 			</div><!-- /row -->
-			<div class="row">
-	<a href="{% url 'studenthub:sports' %}" class="btn btn-primary btn-lg btnsports">Know more</a>
-			</div><!-- /row -->
+
 		</div><!-- /container -->
 	</div><!-- /slide5 -->
 	<!-- === Slide 5 === -->
 	<div class="slide story" id="slide-6" data-slide="6">
 		<div class="container">
 			<div class="row title-row">
-				<div class="col-12 font-semibold">TedX</div>
+				<div class="col-12 font-semibold">Ted X</div>
 			</div><!-- /row -->
 			<div class="row line-row">
 				<div class="hr">&nbsp;</div>
 			</div><!-- /row -->
 			<div class="row subtitle-row">
-				<div class="col-sm-1 hidden-sm">&nbsp;</div>
-				<div class="col-12 col-sm-10 font-light">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. <br/><br/> The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero.</div>
-				<div class="col-sm-1 hidden-sm">&nbsp;</div>
-			</div><!-- /row -->
-			<div class="row content-row">
-				<div class="col-1 col-sm-1 hidden-sm">&nbsp;</div>
-				<div class="col-12 col-sm-2"><img src="images/client01.png" alt=""></div>
-				<div class="col-12 col-sm-2"><img src="images/client02.png" alt=""></div>
-				<div class="col-12 col-sm-2"><img src="images/client03.png" alt=""></div>
-				<div class="col-12 col-sm-2"><img src="images/client04.png" alt=""></div>
-				<div class="col-12 col-sm-2"><img src="images/client05.png" alt=""></div>
-				<div class="col-1 col-sm-1 hidden-sm">&nbsp;</div>
+				
+				<div class="col-12 col-sm-12 font-light">TEDxPESITBSC is a TEDx event organized annually by the students of PESIT Bangalore South Campus. A
+
+TED conference is an event based on the mantra of “ideas worth spreading”. TEDx was created in the
+
+spirit of TED&#39;s mission and supports independent organizers who want to create a TED-like event in their
+
+own community. TEDxPESITBSC aims to bring the TED experience to PESIT-BSC and hosts a platform that
+
+aims to bring together a diverse set of speakers, whose talks revolve around interesting ideas.</div>
+				
 			</div><!-- /row -->
 		</div><!-- /container -->
 	</div><!-- /slide5 -->

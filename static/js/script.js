@@ -84,6 +84,193 @@ function contact() {
         }
     });
 };
+$('#dancecontact').on('submit', function(event){
+    event.preventDefault();
+    dancecontact();
+});
+function dancecontact() {
+    $("#dancesend").text("Sending..");
+    console.log($('#dancemessage').val());
+    $.ajax({
+        url : "/dancecontact/", // the endpoint
+        type : "POST", // http method
+        data : { name : $('#dancename').val(), phone : $('#dancephone').val(), email : $('#danceemail').val(), message : $('#dancemessage').val() }, // data sent with the post request
+        
+        // handle a successful response
+        success : function(json) {
+            $('#dancename').val('');
+            $('#dancephone').val('')
+            $('#danceemail').val('')
+            $('#dancemessage').val('')
+             // remove the value from the input
+             console.log("suxes")
+             $('#dancesuccess').text("Thanks for contacting us. We'll get back to you soon!");
+             $("#dancesend").text("Send");
+        },
+
+        // handle a non-successful response
+        error : function(xhr,errmsg,err) {
+            $('#results').html("<div class='alert-box alert radius' data-alert>Oops! We have encountered an error: "+errmsg+
+                " <a href='#' class='close'>&times;</a></div>"); // add the error to the dom
+            console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
+        }
+    });
+};
+$('#musiccontact').on('submit', function(event){
+    event.preventDefault();
+    musiccontact();
+});
+function musiccontact() {
+    $("#musicsend").text("Sending..");
+    $.ajax({
+        url : "/musiccontact/", // the endpoint
+        type : "POST", // http method
+        data : { name : $('#musicname').val(), phone : $('#musicphone').val(), email : $('#musicemail').val(), message : $('#musicmessage').val() }, // data sent with the post request
+        
+        // handle a successful response
+        success : function(json) {
+            $('#musicname').val('');
+            $('#musicphone').val('')
+            $('#musicemail').val('')
+            $('#musicmessage').val('')
+             // remove the value from the input
+             console.log("suxes")
+             $('#musicsuccess').text("Thanks for contacting us. We'll get back to you soon!");
+             $("#musicsend").text("Send");
+        },
+
+        // handle a non-successful response
+        error : function(xhr,errmsg,err) {
+            $('#results').html("<div class='alert-box alert radius' data-alert>Oops! We have encountered an error: "+errmsg+
+                " <a href='#' class='close'>&times;</a></div>"); // add the error to the dom
+            console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
+        }
+    });
+};
+$('#quizcontact').on('submit', function(event){
+    event.preventDefault();
+    quizcontact();
+});
+function quizcontact() {
+    $("#quizsend").text("Sending..");
+    $.ajax({
+        url : "/quizcontact/", // the endpoint
+        type : "POST", // http method
+        data : { name : $('#quizname').val(), phone : $('#quizphone').val(), email : $('#quizemail').val(), message : $('#quizmessage').val() }, // data sent with the post request
+        
+        // handle a successful response
+        success : function(json) {
+            $('#quizname').val('');
+            $('#quizphone').val('')
+            $('#quizemail').val('')
+            $('#quizmessage').val('')
+             // remove the value from the input
+             console.log("suxes")
+             $('#quizsuccess').text("Thanks for contacting us. We'll get back to you soon!");
+             $("#quizsend").text("Send");
+        },
+
+        // handle a non-successful response
+        error : function(xhr,errmsg,err) {
+            $('#results').html("<div class='alert-box alert radius' data-alert>Oops! We have encountered an error: "+errmsg+
+                " <a href='#' class='close'>&times;</a></div>"); // add the error to the dom
+            console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
+        }
+    });
+};
+$('#theatrecontact').on('submit', function(event){
+    event.preventDefault();
+    theatrecontact();
+});
+function theatrecontact() {
+    $("#theatresend").text("Sending..");
+    $.ajax({
+        url : "/theatrecontact/", // the endpoint
+        type : "POST", // http method
+        data : { name : $('#theatrename').val(), phone : $('#theatrephone').val(), email : $('#theatreemail').val(), message : $('#theatremessage').val() }, // data sent with the post request
+        
+        // handle a successful response
+        success : function(json) {
+            $('#theatrename').val('');
+            $('#theatrephone').val('')
+            $('#theatreemail').val('')
+            $('#theatremessage').val('')
+             // remove the value from the input
+             console.log("suxes")
+             $('#theatresuccess').text("Thanks for contacting us. We'll get back to you soon!");
+             $("#theatresend").text("Send");
+        },
+
+        // handle a non-successful response
+        error : function(xhr,errmsg,err) {
+            $('#results').html("<div class='alert-box alert radius' data-alert>Oops! We have encountered an error: "+errmsg+
+                " <a href='#' class='close'>&times;</a></div>"); // add the error to the dom
+            console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
+        }
+    });
+};
+$('#acmcontact').on('submit', function(event){
+    event.preventDefault();
+    acmcontact();
+});
+function acmcontact() {
+    $("#acmsend").text("Sending..");
+    $.ajax({
+        url : "/acmcontact/", // the endpoint
+        type : "POST", // http method
+        data : { name : $('#acmname').val(), phone : $('#acmphone').val(), email : $('#acmemail').val(), message : $('#acmmessage').val() }, // data sent with the post request
+        
+        // handle a successful response
+        success : function(json) {
+            $('#acmname').val('');
+            $('#acmphone').val('')
+            $('#acmemail').val('')
+            $('#acmmessage').val('')
+             // remove the value from the input
+             console.log("suxes")
+             $('#acmsuccess').text("Thanks for contacting us. We'll get back to you soon!");
+             $("#acmsend").text("Send");
+        },
+
+        // handle a non-successful response
+        error : function(xhr,errmsg,err) {
+            $('#results').html("<div class='alert-box alert radius' data-alert>Oops! We have encountered an error: "+errmsg+
+                " <a href='#' class='close'>&times;</a></div>"); // add the error to the dom
+            console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
+        }
+    });
+};
+$('#ieeecontact').on('submit', function(event){
+    event.preventDefault();
+    ieeecontact();
+});
+function ieeecontact() {
+    $("#ieeesend").text("Sending..");
+    $.ajax({
+        url : "/ieeecontact/", // the endpoint
+        type : "POST", // http method
+        data : { name : $('#ieeename').val(), phone : $('#ieeephone').val(), email : $('#ieeeemail').val(), message : $('#ieeemessage').val() }, // data sent with the post request
+        
+        // handle a successful response
+        success : function(json) {
+            $('#ieeename').val('');
+            $('#ieeephone').val('')
+            $('#ieeeemail').val('')
+            $('#ieeemessage').val('')
+             // remove the value from the input
+             console.log("suxes")
+             $('#ieeesuccess').text("Thanks for contacting us. We'll get back to you soon!");
+             $("#ieeesend").text("Send");
+        },
+
+        // handle a non-successful response
+        error : function(xhr,errmsg,err) {
+            $('#results').html("<div class='alert-box alert radius' data-alert>Oops! We have encountered an error: "+errmsg+
+                " <a href='#' class='close'>&times;</a></div>"); // add the error to the dom
+            console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
+        }
+    });
+};
 $(document).ready(function(e) {
 	$('.with-hover-text, .regular-link').click(function(e){
 		e.stopPropagation();

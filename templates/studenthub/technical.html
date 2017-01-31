@@ -12,19 +12,19 @@
 			</button>
 
 
-			<div class="nav-collapse collapse navbar-responsive-collapse">
+		<div class="nav-collapse collapse navbar-responsive-collapse">
 				<ul class="nav row">
 				<li data-slide="1" class="col-12 col-sm-4"><a id="menu-link-1" href="/#slide-1" title="Next Section"><span class="fa fa-home"></span> <span class="text">HOME</span></a></li>
-					<li data-slide="2" class="col-12 col-sm-4"><a id="menu-link-2" href="/#slide-2" title="Next Section"><span class="fa fa-user"></span> <span class="text">ABOUT US</span></a></li>
 					<li data-slide="4" class="col-12 col-sm-4"><a id="menu-link-3" href="/#slide-4" title="Next Section"><span class="fa fa-briefcase"></span> <span class="text">CLUBS</span></a></li>
-
+					<li data-slide="5" class="col-12 col-sm-4"><a id="menu-link-4" href="/#slide-5" title="Next Section"><span class="fa fa-trophy"></span> <span class="text">SPORTS</span></a></li>
 					</ul>
 					<ul class="nav row">
-					<li data-slide="5" class="col-12 col-sm-4"><a id="menu-link-4" href="/#slide-5" title="Next Section"><span class="fa fa-trophy"></span> <span class="text">SPORTS</span></a></li>
+					
 					<li data-slide="7" class="col-12 col-sm-4"><a id="menu-link-6" href="/#slide-7" title="Next Section"><span class="fa fa-calendar"></span> <span class="text">EVENTS</span></a></li>
+					<li data-slide="8" class="col-12 col-sm-4"><a id="menu-link-8" href="/#slide-8" title="Next Section"><span class="fa fa-user"></span> <span class="text">ABOUT US</span></a></li>
 					<li data-slide="9" class="col-12 col-sm-4"><a id="menu-link-8" href="/#slide-9" title="Next Section"><span class="fa fa-phone"></span> <span class="text">CONTACT</span></a></li>
 					</ul>
-
+			
 				<div class="row">
 					<div class="col-sm-12 active-menu"></div>
 				</div>
@@ -83,38 +83,38 @@ Website -
 
 Register
 <hr>
-<div id="success" class="font-semibold font22"></div>
-        <form action="{% url 'studenthub:contact' %}" method="POST" id="contact">
+<div id="acmsuccess" class="font-semibold font22"></div>
+        <form action="{% url 'studenthub:acmcontact' %}" method="POST" id="acmcontact">
 {% csrf_token %}
             <div class="group">
-                <input type="text" id="name" required>
+                <input type="text" id="acmname" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Name</label>
             </div>
 
             <div class="group">
-                <input type="text" id="email" required>
+                <input type="text" id="acmemail" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Email</label>
             </div>
 
             <div class="group">
-                <input type="text" id="phone" required>
+                <input type="text" id="acmphone" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Mobile No</label>
             </div>
 
             <div class="group">
-                <input type="text" id="message" value = "'I would love to register.'" required>
+                <input type="text" id="acmmessage" value = "'I would love to register.'" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Message</label>
             </div>
             <div class="group">
-                <center> <button type="submit" class="btn btn-lg btnacm btn-block" id="send">Send <span class="glyphicon glyphicon-send"></span></button></center>
+                <center> <button type="submit" class="btn btn-lg btnacm btn-block" id="acmsend">Send <span class="glyphicon glyphicon-send"></span></button></center>
             </div>
         </form>
 </div>
@@ -123,12 +123,12 @@ Register
 <div class="row">
 	<div class="col-sm-6"><span class="font-semibold font22">Chirag Goel</span>
 	<hr>
-	<img src="{% static 'images/acm/chirag.jpg' %}" class="img-responsive">
+	<img src="{{acm.image1.url}}" class="img-responsive">
 	</div>
 	<div class="col-sm-6"><span class="font-semibold font22">Amjad Ali</span>
 
 	<hr>
-	<img src="{% static 'images/acm/amjad.jpg' %}" class="img-responsive">
+	<img src="{{acm.image2.url}}" class="img-responsive">
 	</div></div>
 		</div><!-- /container -->
 	</div><!-- /slide2 -->
@@ -168,6 +168,8 @@ Register
 <div class="col-sm-6">
 <div class="font-light font22 text-left">
 {{ ieee.para1 }}
+<br>
+<br>
 {{ ieee.para2 }}
 </div>
 
@@ -178,7 +180,6 @@ Register
 	<hr>
 <div class="text-left">
 	{{ ieee.head1 }}
-	</head> }}
 <br>
 {{ ieee.head2 }}
 <br>
@@ -188,52 +189,52 @@ Website -
 </div><br>
 Register
 <hr>
-<div id="success" class="font-semibold font22"></div>
-        <form action="{% url 'studenthub:contact' %}" method="POST" id="contact">
+<div id="ieeesuccess" class="font-semibold font22"></div>
+        <form action="{% url 'studenthub:ieeecontact' %}" method="POST" id="ieeecontact">
 {% csrf_token %}
             <div class="group">
-                <input type="text" id="name" required>
+                <input type="text" id="ieeename" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Name</label>
             </div>
 
             <div class="group">
-                <input type="text" id="email" required>
+                <input type="text" id="ieeeemail" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Email</label>
             </div>
 
             <div class="group">
-                <input type="text" id="phone" required>
+                <input type="text" id="ieeephone" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Mobile No</label>
             </div>
 
             <div class="group">
-                <input type="text" id="message" value = "'I would love to register.'" required>
+                <input type="text" id="ieeemessage" value = "'I would love to register.'" required>
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Message</label>
             </div>
             <div class="group">
-                <center> <button type="submit" class="btn btn-lg btncontact btn-block" id="send">Send <span class="glyphicon glyphicon-send"></span></button></center>
+                <center> <button type="submit" class="btn btn-lg btncontact btn-block" id="ieeesend">Send <span class="glyphicon glyphicon-send"></span></button></center>
             </div>
         </form>
 </div>
 </div>
 <br>
 <div class="row">
-	<div class="col-sm-6"><span class="font-semibold font22">Chirag Goel</span>
+	<div class="col-sm-6"><span class="font-semibold font22" >Tyson Pais</span>
 	<hr>
-	<img src="{% static 'images/acm/chirag.jpg' %}" class="img-responsive">
+	<img src="{{ieee.image1.url}}" class="img-responsive" style="height:500px">
 	</div>
-	<div class="col-sm-6"><span class="font-semibold font22">Amjad Ali</span>
+	<div class="col-sm-6"><span class="font-semibold font22">Malika Agarwal</span>
 
 	<hr>
-	<img src="{% static 'images/acm/amjad.jpg' %}" class="img-responsive">
+	<img src="{{ieee.image2.url}}" class="img-responsive" style="height:500px">
 	</div></div>
 		</div><!-- /container -->
 	</div><!-- /slide4 -->
