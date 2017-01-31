@@ -186,6 +186,10 @@ body {
 	.nav li[data-slide="6"] {
 		background-color: #2f2f2f;
 	}
+	.homespan{
+		background-color: #2f2f2f;
+		text-align: left;
+	}
 	
 	.nav li[data-slide="2"] {
 		background-color: #1abc9c;
