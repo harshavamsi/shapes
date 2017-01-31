@@ -13,14 +13,17 @@ def index(request):
 def culturalclubs(request):
 	#d=dance.objects.get(pk=1)
 	m=music.objects.get(pk=1)
-	#q=quiz.objects.get(pk=1)
 	#s=sankalp.objects.get(pk=1)
-	#t=theatre.objects.get(pk=1)
-	context={'music':m}#'sankalp':s,'quiz':q,'theatre':t}
+	t=theatre.objects.get(pk=1)
+	q=quiz.objects.get(pk=1)
+	context={'music':m,'quiz':q,'theatre':t}#,'sankalp':s,'quiz':q,'theatre':t}
 	return render(request, 'studenthub/cultural.html',context)
 
 def technicalclubs(request):
-	return render(request, 'studenthub/technical.html')
+	a=acm.objects.get(pk=1)
+	i=ieee.objects.get(pk=1)
+	context={'acm':a,'ieee':i}
+	return render(request, 'studenthub/technical.html',context)
 
 def sports(request):
 	return render(request, 'studenthub/sports.html')
@@ -42,5 +45,3 @@ def contact(request):
 		return HttpResponse(json.dumps(response_data),content_type="application/json")
 	else:
 		return render(request, 'studenthub/index.html')
-
-

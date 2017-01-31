@@ -11,6 +11,7 @@ class dance(models.Model):
     image2 = models.ImageField(blank=True)
     head1=models.CharField(max_length=120)
     head2=models.CharField(max_length=120)
+    web=models.CharField(max_length=120,blank=True)
     def __str__(self):
         return self.head1
 
@@ -22,6 +23,7 @@ class music(models.Model):
     image2 = models.ImageField(blank=True)
     head1=models.CharField(max_length=120)
     head2=models.CharField(max_length=120)
+    web=models.CharField(max_length=120,blank=True)
     def __str__(self):
         return self.head1
 
@@ -34,6 +36,7 @@ class quiz(models.Model):
     image2 = models.ImageField(blank=True)
     head1=models.CharField(max_length=120)
     head2=models.CharField(max_length=120)
+    web=models.CharField(max_length=120,blank=True)
     def __str__(self):
         return self.head1
 
@@ -46,6 +49,7 @@ class sankalp(models.Model):
     image2 = models.ImageField(blank=True)
     head1=models.CharField(max_length=120)
     head2=models.CharField(max_length=120)
+    web=models.CharField(max_length=120,blank=True)
     def __str__(self):
         return self.head1
 
@@ -57,6 +61,7 @@ class theatre(models.Model):
     image2 = models.ImageField(blank=True)
     head1=models.CharField(max_length=120)
     head2=models.CharField(max_length=120)
+    web=models.CharField(max_length=120,blank=True)
     def __str__(self):
         return self.head1
 
@@ -68,6 +73,7 @@ class acm(models.Model):
     image2 = models.ImageField(blank=True)
     head1=models.CharField(max_length=120)
     head2=models.CharField(max_length=120)
+    web=models.CharField(max_length=120,blank=True)
     def __str__(self):
         return self.head1
 
@@ -79,6 +85,7 @@ class ieee(models.Model):
     image2 = models.ImageField(blank=True)
     head1=models.CharField(max_length=120)
     head2=models.CharField(max_length=120)
+    web=models.CharField(max_length=120,blank=True)
     def __str__(self):
         return self.head1
 
@@ -103,6 +110,7 @@ class danceContact(models.Model):
     email=models.EmailField(max_length=125,blank=False)
     phone=models.BigIntegerField(blank=False)
     message=models.TextField(blank=False)
+
     def __str__(self):
         return self.name
 class quizContact(models.Model):
@@ -110,6 +118,7 @@ class quizContact(models.Model):
     email=models.EmailField(max_length=125,blank=False)
     phone=models.BigIntegerField(blank=False)
     message=models.TextField(blank=False)
+
     def __str__(self):
         return self.name
 
@@ -118,6 +127,7 @@ class sankalpContact(models.Model):
     email=models.EmailField(max_length=125,blank=False)
     phone=models.BigIntegerField(blank=False)
     message=models.TextField(blank=False)
+
     def __str__(self):
         return self.name
 
@@ -126,15 +136,17 @@ class theatreContact(models.Model):
     email=models.EmailField(max_length=125,blank=False)
     phone=models.BigIntegerField(blank=False)
     message=models.TextField(blank=False)
+
     def __str__(self):
-        return self.name       
-        
+        return self.name
+
 
 class acmContact(models.Model):
     name=models.CharField(max_length=30,blank=False)
     email=models.EmailField(max_length=125,blank=False)
     phone=models.BigIntegerField(blank=False)
     message=models.TextField(blank=False)
+
     def __str__(self):
         return self.name
 
@@ -143,6 +155,6 @@ class ieeeContact(models.Model):
     email=models.EmailField(max_length=125,blank=False)
     phone=models.BigIntegerField(blank=False)
     message=models.TextField(blank=False)
+    
     def __str__(self):
-        return self.name        
-
+        return self.name
