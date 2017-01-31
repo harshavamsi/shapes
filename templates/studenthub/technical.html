@@ -10,31 +10,31 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			
-			
+
+
 			<div class="nav-collapse collapse navbar-responsive-collapse">
 				<ul class="nav row">
 				<li data-slide="1" class="col-12 col-sm-4"><a id="menu-link-1" href="/#slide-1" title="Next Section"><span class="fa fa-home"></span> <span class="text">HOME</span></a></li>
 					<li data-slide="2" class="col-12 col-sm-4"><a id="menu-link-2" href="/#slide-2" title="Next Section"><span class="fa fa-user"></span> <span class="text">ABOUT US</span></a></li>
 					<li data-slide="4" class="col-12 col-sm-4"><a id="menu-link-3" href="/#slide-4" title="Next Section"><span class="fa fa-briefcase"></span> <span class="text">CLUBS</span></a></li>
-					
+
 					</ul>
 					<ul class="nav row">
 					<li data-slide="5" class="col-12 col-sm-4"><a id="menu-link-4" href="/#slide-5" title="Next Section"><span class="fa fa-trophy"></span> <span class="text">SPORTS</span></a></li>
 					<li data-slide="7" class="col-12 col-sm-4"><a id="menu-link-6" href="/#slide-7" title="Next Section"><span class="fa fa-calendar"></span> <span class="text">EVENTS</span></a></li>
 					<li data-slide="9" class="col-12 col-sm-4"><a id="menu-link-8" href="/#slide-9" title="Next Section"><span class="fa fa-phone"></span> <span class="text">CONTACT</span></a></li>
 					</ul>
-			
+
 				<div class="row">
 					<div class="col-sm-12 active-menu"></div>
 				</div>
 			</div><!-- /.nav-collapse -->
 	</div><!-- /.navbar -->
-	
-	
 
-	
-	
+
+
+
+
 	<!-- === MAIN Background === -->
 	<div class=" story" id="slide1rest" data-slide="1">
 		<div class="container">
@@ -47,7 +47,7 @@
 			</div><!-- /row -->
 		</div><!-- /container -->
 	</div><!-- /slide1 -->
-	
+
 	<!-- === Slide 2 === -->
 	<div class="slide story" id="slide-2" data-slide="2">
 		<div class="container">
@@ -63,34 +63,24 @@
 			<div class="row">
 <div class="col-sm-6">
 <div class="font-light font22 text-left">
-	PESITSouth ACM (Association for Computing Machinery) Student Chapter is organization by the
-
-students, for the students of PESIT Bangalore South Campus. Having started in 2007, we are in our
-
-10th year. We focus on student development and challenge the field of computing machinery and
-
-bring about solutions and change. The chapter helps its members go beyond the books and be
-
-part of projects and researches to approach solutions to expected problems by working with
-
-teams of like-minded people.
+{{ acm.para1 }}
 </div>
 <br>
 <div class="font-semibold font22">
-	Contact us 
+	Contact us
 	<hr>
 <div class="text-left">
-	Chirag Goel - chirag1goel@gmail.com
+	{{ acm.head1 }}
 <br>
-Amjad Ali – amjad.4@gmail.com
+{{ acm.head2 }}
 <br>
-Website - 
-<a href="http://pesitsouthacm.org" style="color:white; font-weight: 600;" target="_blank">pesitsouthacm.org</a>
+Website -
+<a href="{{ acm.web }}" style="color:white; font-weight: 600;" target="_blank">pesitsouthacm.org</a>
 </div>
 </div>
 </div>
 <div class="col-sm-6 font-semibold font22">
-	
+
 Register
 <hr>
 <div id="success" class="font-semibold font22"></div>
@@ -126,7 +116,7 @@ Register
             <div class="group">
                 <center> <button type="submit" class="btn btn-lg btnacm btn-block" id="send">Send <span class="glyphicon glyphicon-send"></span></button></center>
             </div>
-        </form>	
+        </form>
 </div>
 </div>
 <br>
@@ -142,7 +132,7 @@ Register
 	</div></div>
 		</div><!-- /container -->
 	</div><!-- /slide2 -->
-	
+
 	<!-- === SLide 3 - Portfolio -->
 	<!--
 	<div class="slide story" id="slide-3" data-slide="3">
@@ -177,23 +167,23 @@ Register
 			<div class="row">
 <div class="col-sm-6">
 <div class="font-light font22 text-left">
-IEEE is the world's largest professional organization dedicated to advancing technological innovation and excellence for the benefit of humanity. 
-PESIT Bangalore South Campus IEEE Student Chapter is devoted to its aim of instilling scientific temperament in the student community through a plethora of activities around the year. The chapter also introduced a Women in Engineering Affinity Group that is dedicated to promoting women engineers to follow their academic interests to a career in engineering, this group was awarded Most Promising Affinity Group by IEEE Bangalore Section.
-           The chapter is extremely active and has had various events in the past like workshops on Octave & Python, talks on Virtual and Augmented Reality, quizzes, industrial visits to sites like ISRO and HAL, circuit debugging contests, coding and algorithm design competitions, STAR(Student-Teacher and Research Engineer) programs etc. The chapter also encourages and facilitates students to publish IEEE standard papers and attend other IEEE seminars, meetings, webinars and conferences around the country. 
+{{ ieee.para1 }}
+{{ ieee.para2 }}
 </div>
 
 </div>
 <div class="col-sm-6 font-semibold font22">
 	<div class="font-semibold font22">
-	Contact us 
+	Contact us
 	<hr>
 <div class="text-left">
-	Chirag Goel - chirag1goel@gmail.com
+	{{ ieee.head1 }}
+	</head> }}
 <br>
-Amjad Ali – amjad.4@gmail.com
+{{ ieee.head2 }}
 <br>
-Website - 
-<a href="http://pesitieee.esy.es" style="color:white; font-weight: 600;" target="_blank">pesitieee.esy.es</a>
+Website -
+<a href="{{ ieee.web }}" style="color:white; font-weight: 600;" target="_blank">pesitieee.esy.es</a>
 </div>
 </div><br>
 Register
@@ -231,7 +221,7 @@ Register
             <div class="group">
                 <center> <button type="submit" class="btn btn-lg btncontact btn-block" id="send">Send <span class="glyphicon glyphicon-send"></span></button></center>
             </div>
-        </form>	
+        </form>
 </div>
 </div>
 <br>
@@ -247,6 +237,6 @@ Register
 	</div></div>
 		</div><!-- /container -->
 	</div><!-- /slide4 -->
-	
+
 
 {% endblock %}
