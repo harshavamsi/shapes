@@ -4,7 +4,7 @@ from django.urls import reverse
 from django.shortcuts import redirect
 from studenthub.forms import PostForm
 from django.core.mail import send_mail
-from .models import dance,music,quiz,sankalp,theatre,ACM,IEEE,contact
+from .models import *
 import json
 
 def index(request):

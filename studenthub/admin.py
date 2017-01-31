@@ -1,13 +1,20 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import music#quiz,sankalp,theatre,ACM,IEEE,contact
+from .models import *
 
-#admin.site.register(dance)
+admin.site.register(dance)
 admin.site.register(music)
-#admin.site.register(quiz)
-#admin.site.register(sankalp)
-#admin.site.register(theatre)
-#admin.site.register(ACM)
-#admin.site.register(IEEE)
-#admin.site.register(contact)
+admin.site.register(quiz)
+admin.site.register(sankalp)
+admin.site.register(theatre)
+admin.site.register(acm)
+admin.site.register(ieee)
+admin.site.register(contact)
+admin.site.register(danceContact)
+admin.site.register(musicContact)
+admin.site.register(quizContact)
+admin.site.register(sankalpContact)
+admin.site.register(theatreContact)
+admin.site.register(acmContact)
+admin.site.register(ieeeContact)
