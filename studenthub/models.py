@@ -94,10 +94,10 @@ class ieee(models.Model):
     def __str__(self):
         return self.head1
 
-class contact(models.Model):
+class Contact(models.Model):
     name=models.CharField(max_length=30,blank=False)
     email=models.EmailField(max_length=125,blank=False)
-    phone=models.BigIntegerField(blank=False)
+    phone=models.TextField(blank=False)
     message=models.TextField(blank=False)
     def __str__(self):
         return self.name
@@ -113,7 +113,7 @@ class musicContact(models.Model):
 class danceContact(models.Model):
     name=models.CharField(max_length=30,blank=False)
     email=models.EmailField(max_length=125,blank=False)
-    phone=models.BigIntegerField(blank=False)
+    phone=models.TextField(blank=False)
     message=models.TextField(blank=False)
 
     def __str__(self):
@@ -121,7 +121,7 @@ class danceContact(models.Model):
 class quizContact(models.Model):
     name=models.CharField(max_length=30,blank=False)
     email=models.EmailField(max_length=125,blank=False)
-    phone=models.BigIntegerField(blank=False)
+    phone=models.TextField(blank=False)
     message=models.TextField(blank=False)
 
     def __str__(self):
@@ -130,7 +130,7 @@ class quizContact(models.Model):
 class sankalpContact(models.Model):
     name=models.CharField(max_length=30,blank=False)
     email=models.EmailField(max_length=125,blank=False)
-    phone=models.BigIntegerField(blank=False)
+    phone=models.TextField(blank=False)
     message=models.TextField(blank=False)
 
     def __str__(self):
@@ -139,7 +139,7 @@ class sankalpContact(models.Model):
 class theatreContact(models.Model):
     name=models.CharField(max_length=30,blank=False)
     email=models.EmailField(max_length=125,blank=False)
-    phone=models.BigIntegerField(blank=False)
+    phone=models.TextField(blank=False)
     message=models.TextField(blank=False)
 
     def __str__(self):
@@ -149,7 +149,7 @@ class theatreContact(models.Model):
 class acmContact(models.Model):
     name=models.CharField(max_length=30,blank=False)
     email=models.EmailField(max_length=125,blank=False)
-    phone=models.BigIntegerField(blank=False)
+    phone=models.TextField(blank=False)
     message=models.TextField(blank=False)
 
     def __str__(self):
@@ -158,7 +158,7 @@ class acmContact(models.Model):
 class ieeeContact(models.Model):
     name=models.CharField(max_length=30,blank=False)
     email=models.EmailField(max_length=125,blank=False)
-    phone=models.BigIntegerField(blank=False)
+    phone=models.TextField(blank=False)
     message=models.TextField(blank=False)
     
     def __str__(self):

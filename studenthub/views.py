@@ -37,7 +37,7 @@ def contact(request):
 		email = request.POST.get('email')
 		phone = request.POST.get('phone')
 		msg = request.POST.get('message')
-		c = contact(name = name, email = email , phone = phone, message = msg)
+		c = Contact(name = name, email = email , phone = phone, message = msg)
 		c.save()
 		sub = "Contact"
 		message = msg + "\n" + "\n" + "Phone - " + phone
