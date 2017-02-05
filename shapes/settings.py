@@ -123,9 +123,9 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
 
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'harshavamsi096@gmail.com'
-EMAIL_HOST_PASSWORD = 'Dareglobal_2016'
+EMAIL_HOST_USER = 'shapes_pes'
+EMAIL_HOST_PASSWORD = 'sh@pes2017'
+EMAIL_USE_TLS = True
 
