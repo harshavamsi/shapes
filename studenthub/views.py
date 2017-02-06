@@ -22,7 +22,9 @@ def culturalclubs(request):
 def technicalclubs(request):
 	a=acm.objects.get(pk=1)
 	i=ieee.objects.get(pk=1)
-	context={'acm':a,'ieee':i}
+	#e = enigma.objects.get(pk=1)
+	#aa = avions.objects.get(pk=1)
+	context={'acm':a,'ieee':i,}
 	return render(request, 'studenthub/technical.html',context)
 
 def sports(request):
@@ -152,6 +154,60 @@ def ieeecontact(request):
 		msg = request.POST.get('message')
 		sub = "Contact"
 		c = ieeeContact(name = name, email = email , phone = phone, message = msg)
+		c.save()
+		message = msg + "\n" + "\n" + "Phone - " + phone
+		send_mail(sub,message,email, ['harshavamsi096@gmail.com'] )
+		response_data = {}
+		response_data['result'] = "Thanks for contacting us. We'll get back to you soon!"
+		return HttpResponse(json.dumps(response_data),content_type="application/json")
+	else:
+		return render(request, 'studenthub/index.html')
+
+
+def avionscontact(request):
+	if request.method == "POST":
+		name = request.POST.get('name')
+		email = request.POST.get('email')
+		phone = request.POST.get('phone')
+		msg = request.POST.get('message')
+		sub = "Contact"
+		c = avionsContact(name = name, email = email , phone = phone, message = msg)
+		c.save()
+		message = msg + "\n" + "\n" + "Phone - " + phone
+		send_mail(sub,message,email, ['harshavamsi096@gmail.com'] )
+		response_data = {}
+		response_data['result'] = "Thanks for contacting us. We'll get back to you soon!"
+		return HttpResponse(json.dumps(response_data),content_type="application/json")
+	else:
+		return render(request, 'studenthub/index.html')
+
+def enigmacontact(request):
+	if request.method == "POST":
+		name = request.POST.get('name')
+		email = request.POST.get('email')
+		phone = request.POST.get('phone')
+		msg = request.POST.get('message')
+		sub = "Contact"
+		c = enigmaContact(name = name, email = email , phone = phone, message = msg)
+		c.save()
+		message = msg + "\n" + "\n" + "Phone - " + phone
+		send_mail(sub,message,email, ['harshavamsi096@gmail.com'] )
+		response_data = {}
+		response_data['result'] = "Thanks for contacting us. We'll get back to you soon!"
+		return HttpResponse(json.dumps(response_data),content_type="application/json")
+	else:
+		return render(request, 'studenthub/index.html')
+
+
+
+def sankalpcontact(request):
+	if request.method == "POST":
+		name = request.POST.get('name')
+		email = request.POST.get('email')
+		phone = request.POST.get('phone')
+		msg = request.POST.get('message')
+		sub = "Contact"
+		c = sankalpContact(name = name, email = email , phone = phone, message = msg)
 		c.save()
 		message = msg + "\n" + "\n" + "Phone - " + phone
 		send_mail(sub,message,email, ['harshavamsi096@gmail.com'] )

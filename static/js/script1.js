@@ -271,6 +271,72 @@ function ieeecontact() {
         }
     });
 };
+
+
+$('#enigmacontact').on('submit', function(event){
+    event.preventDefault();
+    enigmacontact();
+});
+function enigmacontact() {
+    $("#enigmasend").text("Sending..");
+    $.ajax({
+        url : "/enigmacontact/", // the endpoint
+        type : "POST", // http method
+        data : { name : $('#enigmaname').val(), phone : $('#enigmaphone').val(), email : $('#enigmaemail').val(), message : $('#enigmamessage').val() }, // data sent with the post request
+        
+        // handle a successful response
+        success : function(json) {
+            $('#enigmaname').val('');
+            $('#enigmaphone').val('')
+            $('#enigmaemail').val('')
+            $('#enigmamessage').val('')
+             // remove the value from the input
+             console.log("suxes")
+             $('#enigmasuccess').text("Thanks for contacting us. We'll get back to you soon!");
+             $("#enigmasend").text("Send");
+        },
+
+        // handle a non-successful response
+        error : function(xhr,errmsg,err) {
+            $('#results').html("<div class='alert-box alert radius' data-alert>Oops! We have encountered an error: "+errmsg+
+                " <a href='#' class='close'>&times;</a></div>"); // add the error to the dom
+            console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
+        }
+    });
+};
+
+
+$('#avionscontact').on('submit', function(event){
+    event.preventDefault();
+    avionscontact();
+});
+function ieeecontact() {
+    $("#avionssend").text("Sending..");
+    $.ajax({
+        url : "/avionscontact/", // the endpoint
+        type : "POST", // http method
+        data : { name : $('#ieeename').val(), phone : $('#ieeephone').val(), email : $('#ieeeemail').val(), message : $('#ieeemessage').val() }, // data sent with the post request
+        
+        // handle a successful response
+        success : function(json) {
+            $('#avionsname').val('');
+            $('#avionsphone').val('')
+            $('#avionsemail').val('')
+            $('#avionsmessage').val('')
+             // remove the value from the input
+             console.log("suxes")
+             $('#avionssuccess').text("Thanks for contacting us. We'll get back to you soon!");
+             $("#avionssend").text("Send");
+        },
+
+        // handle a non-successful response
+        error : function(xhr,errmsg,err) {
+            $('#results').html("<div class='alert-box alert radius' data-alert>Oops! We have encountered an error: "+errmsg+
+                " <a href='#' class='close'>&times;</a></div>"); // add the error to the dom
+            console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
+        }
+    });
+};
 $(document).ready(function(e) {
 	$('.with-hover-text, .regular-link').click(function(e){
 		e.stopPropagation();

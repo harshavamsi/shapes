@@ -124,9 +124,8 @@ EMAIL_HOST_USER = 'shapes_pes'
 EMAIL_HOST_PASSWORD = 'sh@pes2017'
 EMAIL_USE_TLS = True
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['shapes.org.in','localhost']
 
-STATIC_ROOT = os.environ.get('STATIC_ROOT', None)
 

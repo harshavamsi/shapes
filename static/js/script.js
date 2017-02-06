@@ -147,6 +147,38 @@ function musiccontact() {
         }
     });
 };
+
+$('#sankalpcontact').on('submit', function(event){
+    event.preventDefault();
+    musiccontact();
+});
+function sankalpcontact() {
+    $("#sankalpsend").text("Sending..");
+    $.ajax({
+        url : "/sankalpcontact/", // the endpoint
+        type : "POST", // http method
+        data : { name : $('#sankalpname').val(), phone : $('#sankalpphone').val(), email : $('#sankalpemail').val(), message : $('#sankalpmessage').val() }, // data sent with the post request
+        
+        // handle a successful response
+        success : function(json) {
+            $('#sankalpname').val('');
+            $('#sankalpphone').val('')
+            $('#sankalpemail').val('')
+            $('#sankalpmessage').val('')
+             // remove the value from the input
+             console.log("suxes")
+             $('#sankalpsuccess').text("Thanks for contacting us. We'll get back to you soon!");
+             $("#sankalpsend").text("Send");
+        },
+
+        // handle a non-successful response
+        error : function(xhr,errmsg,err) {
+            $('#results').html("<div class='alert-box alert radius' data-alert>Oops! We have encountered an error: "+errmsg+
+                " <a href='#' class='close'>&times;</a></div>"); // add the error to the dom
+            console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
+        }
+    });
+};
 $('#quizcontact').on('submit', function(event){
     event.preventDefault();
     quizcontact();
@@ -382,7 +414,7 @@ $(function() {
 				if ( $('#slide-3 img').length % 2 != 0 ) {
 					gallery_width += $('#slide-3 img').width();
 				}
-				
+				gallery_width = 5424;
 				$('#slide-3 .row').css('width', gallery_width );
 				
 				var left_pos = $('#slide-3 .row').width() - $('body').width();

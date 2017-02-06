@@ -320,20 +320,71 @@ Register
 			<div class="row line-row">
 				<div class="hr">&nbsp;</div>
 			</div><!-- /row -->
-			<div class="row subtitle-row">
-				<div class="col-sm-1 hidden-sm">&nbsp;</div>
-				<div class="col-12 col-sm-10 font-light">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. <br/><br/> The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero.</div>
-				<div class="col-sm-1 hidden-sm">&nbsp;</div>
-			</div><!-- /row -->
-			<div class="row content-row">
-				<div class="col-1 col-sm-1 hidden-sm">&nbsp;</div>
-				<div class="col-12 col-sm-2"><img src="images/client01.png" alt=""></div>
-				<div class="col-12 col-sm-2"><img src="images/client02.png" alt=""></div>
-				<div class="col-12 col-sm-2"><img src="images/client03.png" alt=""></div>
-				<div class="col-12 col-sm-2"><img src="images/client04.png" alt=""></div>
-				<div class="col-12 col-sm-2"><img src="images/client05.png" alt=""></div>
-				<div class="col-1 col-sm-1 hidden-sm">&nbsp;</div>
-			</div><!-- /row -->
+			<br>
+			<br>
+			<br>
+			<div class="row">
+<div class="col-sm-6">
+<div class="font-light font22 text-left">
+	{{ sankalp.para1 }}
+</div>
+<br>
+<div class="font-semibold font22">
+	Contact us
+	<hr>
+<div class="text-left">
+	{{ sankalp.head1 }}
+
+{{ sankalp.head2 }}
+</div>
+</div>
+</div>
+<div class="col-sm-6 font-semibold font22">
+
+Register
+<hr>
+<div id="sankalpsuccess" class="font-semibold font22"></div>
+        <form action="{% url 'studenthub:sankalpcontact' %}" method="POST" id="sankalpcontact">
+{% csrf_token %}
+            <div class="group">
+                <input type="text" id="sankalpname" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Name</label>
+            </div>
+
+            <div class="group">
+                <input type="email" id="sankalpemail" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Email</label>
+            </div>
+
+            <div class="group">
+                <input type="text" id="sankalpphone" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Mobile No</label>
+            </div>
+
+            <div class="group">
+                <input type="text" id="sankalpmessage" value = "'I would love to register.'" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Message</label>
+            </div>
+            <div class="group">
+                <center> <button type="submit" class="btn btn-lg btnsportslg btn-block" id="sankalpsend">Send <span class="glyphicon glyphicon-send"></span></button></center>
+            </div>
+        </form>
+</div>
+</div>
+<div class="row">
+	<div class="col-sm-offset-3 col-sm-6"><span class="font-semibold font22"></span>
+	<hr>
+	<img src="{{sankalp.image1.url}}" class="img-responsive" style="height: 600px;">
+	</div>
+</div>
 		</div><!-- /container -->
 	</div><!-- /slide5 -->
 	<!-- === Slide 5 === -->
@@ -406,14 +457,14 @@ Register
 </div>
 </div>
 <div class="row">
-	<div class="col-sm-6"><span class="font-semibold font22">Tejas Manjunath</span>
+	<div class="col-sm-6"><span class="font-semibold font22"></span>
 	<hr>
-	<img src="{% static 'images/music/tejas.jpg' %}" class="img-responsive">
+	
 	</div>
-	<div class="col-sm-6"><span class="font-semibold font22">Vrushali Deshmukh</span>
+	<div class="col-sm-6"><span class="font-semibold font22"></span>
 
 	<hr>
-	<img src="{% static 'images/music/vrushali.jpg' %}" class="img-responsive">
+	
 	</div></div>
 
 			</div><!-- /container -->

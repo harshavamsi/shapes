@@ -20,8 +20,9 @@
 					
 					</ul>
 					<ul class="nav row">
-					<li data-slide="5" class="col-12 col-sm-6"><a id="menu-link-4" href="#slide-5" title="Next Section"><span class="fa fa-trophy"></span> <span class="text">MAAYA</span></a></li>
-					<li data-slide="6" class="col-12 col-sm-6"><a id="menu-link-6" href="#slide-6" title="Next Section"><span class="fa fa-calendar"></span> <span class="text">TEDX</span></a></li>
+					<li data-slide="5" class="col-12 col-sm-4"><a id="menu-link-4" href="#slide-5" title="Next Section"><span class="fa fa-trophy"></span> <span class="text">MAAYA</span></a></li>
+					<li data-slide="6" class="col-12 col-sm-4"><a id="menu-link-6" href="#slide-6" title="Next Section"><span class="fa fa-calendar"></span> <span class="text">TEDX</span></a></li>
+					<li data-slide="7" class="col-12 col-sm-4"><a id="menu-link-7" href="#slide-7" title="Next Section"><span class="fa fa-phone"></span> <span class="text">KLUDGE</span></a></li>
 					</ul>
 			
 				<div class="row">
@@ -30,7 +31,12 @@
 			</div><!-- /.nav-collapse -->
 	</div><!-- /.navbar -->
 	
-	
+	<div id="arrows">
+		<div id="arrow-up" class="disabled"></div>
+		<div id="arrow-down" class="disabled"></div>
+		<div id="arrow-left" class=" visible-lg"></div>
+		<div id="arrow-right" class=" visible-lg"></div>
+	</div><!-- /.arrows -->
 
 	
 	
@@ -61,28 +67,26 @@
 				<div class="col-12 col-sm-12 font-light">Every even semester, PESIT-BSC hosts one of the most awaited events of the year. Activity Day, the interdepartmental events. These events be it sports or tech or cultural culminate on the epic day where every department has only one goal, “to be the best of them all”. Students work day and night before the event putting in massive amounts of time and effort to see their department on top, to be crowned interdepartmental champions!</div>
 				
 			</div><!-- /row -->
+			
 		</div><!-- /container -->
 	</div><!-- /slide2 -->
-	
-	<!-- === SLide 3 - Portfolio -->
-	<!--
-	<div class="slide story" id="slide-3" data-slide="3">
+
+<div class="slide story" id="slide-3" data-slide="3">
 		<div class="row">
-			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p01-large.jpg"><img class="thumb" src="images/portfolio/p01-small.jpg" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p02-large.jpg"><img class="thumb" src="images/portfolio/p02-small.jpg" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p09-large.jpg"><img class="thumb" src="images/portfolio/p09-small.jpg" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p010-large.jpg"><img class="thumb" src="images/portfolio/p10-small.jpg" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p05-large.jpg"><img class="thumb" src="images/portfolio/p05-small.jpg" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p06-large.jpg"><img class="thumb" src="images/portfolio/p06-small.jpg" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p07-large.jpg"><img class="thumb" src="images/portfolio/p07-small.jpg" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p08-large.jpg"><img class="thumb" src="images/portfolio/p08-small.jpg" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p03-large.jpg"><img class="thumb" src="images/portfolio/p03-small.jpg" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p04-large.jpg"><img class="thumb" src="images/portfolio/p04-small.jpg" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p11-large.jpg"><img class="thumb" src="images/portfolio/p11-small.jpg" alt=""></a></div>
-			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/p12-large.jpg"><img class="thumb" src="images/portfolio/p12-small.jpg" alt=""></a></div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/activityday/a1.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"> <img class="thumb" src="{% static 'images/activityday/a2.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"> <img class="thumb" src="{% static 'images/activityday/a3.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/activityday/a4.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/activityday/a5.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"> <img class="thumb" src="{% static 'images/activityday/a6.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"> <img class="thumb" src="{% static 'images/activityday/a7.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"> <img class="thumb" src="{% static 'images/activityday/a16.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"> <img class="thumb" src="{% static 'images/activityday/a9.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/activityday/a10.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"> <img class="thumb" src="{% static 'images/activityday/a11.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"> <img class="thumb" src="{% static 'images/activityday/a12.jpg' %}" alt=""> </div>
 		</div>
 	</div>
-	-->
 	<!-- === Slide 4 - Process === -->
 	<div class="slide story" id="slide-4" data-slide="4">
 		<div class="container">
@@ -97,7 +101,22 @@
 			</div><!-- /row -->
 		</div><!-- /container -->
 	</div><!-- /slide4 -->
-	
+		<div class="slide story" id="slide-3" data-slide="3">
+			<div class="row">
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/ingenius/a1.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"> <img class="thumb" src="{% static 'images/ingenius/a2.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"> <img class="thumb" src="{% static 'images/ingenius/a3.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/ingenius/a4.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/ingenius/a5.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"> <img class="thumb" src="{% static 'images/ingenius/a6.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"> <img class="thumb" src="{% static 'images/ingenius/a7.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"> <img class="thumb" src="{% static 'images/ingenius/a16.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"> <img class="thumb" src="{% static 'images/ingenius/a9.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/ingenius/a10.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"> <img class="thumb" src="{% static 'images/ingenius/a11.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"> <img class="thumb" src="{% static 'images/ingenius/a12.jpg' %}" alt=""> </div>
+		</div>
+			</div>
 	<!-- === Slide 5 === -->
 	<div class="slide story" id="slide-5" data-slide="5">
 		<div class="container">
@@ -113,6 +132,23 @@
 
 		</div><!-- /container -->
 	</div><!-- /slide5 -->
+	<div class="slide story" id="slide-3" data-slide="3">
+			<div class="row">
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/maaya/a1.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/maaya/a2.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/maaya/a3.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/maaya/a4.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/maaya/a5.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/maaya/a6.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/maaya/a7.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/maaya/a8.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/maaya/a9.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/maaya/a10.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/maaya/a11.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/maaya/a12.jpg' %}" alt=""> </div>
+			
+		</div>
+			</div>
 	<!-- === Slide 5 === -->
 	<div class="slide story" id="slide-6" data-slide="6">
 		<div class="container">
@@ -137,6 +173,75 @@ aims to bring together a diverse set of speakers, whose talks revolve around int
 			</div><!-- /row -->
 		</div><!-- /container -->
 	</div><!-- /slide5 -->
-	
+		<div class="slide story" id="slide-3" data-slide="3">
+			<div class="row">
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/tedx/a1.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/tedx/a2.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/tedx/a3.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/tedx/a4.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/tedx/a5.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/tedx/a6.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/tedx/a7.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/tedx/a8.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/tedx/a9.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/tedx/a10.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/tedx/a11.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/kludge/a12.jpg' %}" alt=""> </div>
+		</div>
+			</div>
+
+			<div class="slide story" id="slide-7" data-slide="7">
+		<div class="container">
+			<div class="row title-row">
+				<div class="col-12 font-semibold">Kludge</div>
+			</div><!-- /row -->
+			<div class="row line-row">
+				<div class="hr">&nbsp;</div>
+			</div><!-- /row -->
+			<div class="row subtitle-row">
+				
+				<div class="col-12 col-sm-12 font-light">KLUDGE -the Annual Technical hackathon of PESIT- Bangalore South
+
+Campus started in 2014 as a 12 hour technical design challenge fest
+
+initiated by the ECE department of PESIT-BSC. KLUDGE has grown by
+
+leaps and bounds over the last two years. It has brought together the
+
+various fields of engineering through the innovative minds nurtured in our
+
+campus, giving life to some brilliant ideas. It has moved from a dawn-to-
+
+dusk mode to dawn-to- dawn event.
+
+The main focus of KLUDGE is to facilitate for the betterment of the society.
+
+The theme in kludge has moved from “Enabling the differently abled” to
+
+“healthcare systems” to “Innovation for a Sustainable Living” in the last year.
+
+The theme has always been revolving around building products/gadgets
+
+that carry high social impact.
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /slide5 -->
+			</div>
+		<div class="slide story" id="slide-3" data-slide="3">
+			<div class="row">
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/kludge/a1.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/kludge/a2.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/kludge/a3.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/kludge/a4.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/kludge/a5.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/kludge/a6.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/kludge/a7.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/kludge/a8.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/kludge/a9.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/kludge/a10.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/kludge/a11.jpg' %}" alt=""> </div>
+			<div class="col-12 col-sm-6 col-lg-2"><img class="thumb" src="{% static 'images/kludge/a12.jpg' %}" alt=""> </div>
+		</div>
+			</div>
 	
 {% endblock %}
