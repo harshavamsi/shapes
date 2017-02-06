@@ -126,6 +126,5 @@ EMAIL_USE_TLS = True
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['shapes.org.in','localhost','35.154.71.22','www.shapes.org.in']
+ALLOWED_HOSTS = ['*']
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
