@@ -23,11 +23,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'm9_fxvv3+3dvla3pfda&oi(ac3&(8md0#@3!_6nfw!!r*8_pnw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -128,4 +123,10 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'shapes_pes'
 EMAIL_HOST_PASSWORD = 'sh@pes2017'
 EMAIL_USE_TLS = True
+
+DEBUG = False
+
+ALLOWED_HOSTS = ['shapes.org.in','localhost']
+
+STATIC_ROOT = os.environ.get('STATIC_ROOT', None)
 
