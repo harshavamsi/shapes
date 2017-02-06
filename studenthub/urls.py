@@ -16,4 +16,7 @@ urlpatterns = [
 	url(r'^theatrecontact/$', views.theatrecontact, name = 'theatrecontact'),
 	url(r'^acmcontact/$', views.acmcontact, name = 'acmcontact'),
 	url(r'^ieeecontact/$', views.ieeecontact, name = 'ieeecontact'),
+	url(r'^enigmacontact/$', views.enigmacontact, name = 'enigmacontact'),
+	url(r'^avionscontact/$', views.avionscontact, name = 'avionscontact'),
+	url(r'^sankalpcontact/$', views.sankalpcontact, name = 'sankalpcontact'),
 ] +  static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 

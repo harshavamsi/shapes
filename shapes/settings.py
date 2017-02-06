@@ -128,5 +128,4 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['shapes.org.in','localhost','35.154.71.22','www.shapes.org.in']
 
-STATIC_ROOT = os.environ.get('STATIC_ROOT', None)
 

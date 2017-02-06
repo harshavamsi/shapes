@@ -94,6 +94,30 @@ class ieee(models.Model):
     def __str__(self):
         return self.head1
 
+class avions(models.Model):
+    para1=models.TextField(blank=True)
+    para2=models.TextField(blank=True)
+    para3=models.TextField(blank=True)
+    image1 = models.ImageField(blank=True, upload_to=update_image_name)
+    image2 = models.ImageField(blank=True, upload_to=update_image_name)
+    head1=models.CharField(max_length=120,blank=True)
+    head2=models.CharField(max_length=120,blank=True)
+    web=models.CharField(max_length=120,blank=True)
+    def __str__(self):
+        return self.head1
+
+class enigma(models.Model):
+    para1=models.TextField(blank=True)
+    para2=models.TextField(blank=True)
+    para3=models.TextField(blank=True)
+    image1 = models.ImageField(blank=True, upload_to=update_image_name)
+    image2 = models.ImageField(blank=True, upload_to=update_image_name)
+    head1=models.CharField(max_length=120,blank=True)
+    head2=models.CharField(max_length=120,blank=True)
+    web=models.CharField(max_length=120,blank=True)
+    def __str__(self):
+        return self.head1     
+
 class Contact(models.Model):
     name=models.CharField(max_length=30,blank=False)
     email=models.EmailField(max_length=125,blank=False)
@@ -156,6 +180,23 @@ class acmContact(models.Model):
         return self.name
 
 class ieeeContact(models.Model):
+    name=models.CharField(max_length=30,blank=False)
+    email=models.EmailField(max_length=125,blank=False)
+    phone=models.TextField(blank=False)
+    message=models.TextField(blank=False)
+    
+    def __str__(self):
+        return self.name
+
+class enigmaContact(models.Model):
+    name=models.CharField(max_length=30,blank=False)
+    email=models.EmailField(max_length=125,blank=False)
+    phone=models.TextField(blank=False)
+    message=models.TextField(blank=False)
+    
+    def __str__(self):
+        return self.name
+class avionsContact(models.Model):
     name=models.CharField(max_length=30,blank=False)
     email=models.EmailField(max_length=125,blank=False)
     phone=models.TextField(blank=False)

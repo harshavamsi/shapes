@@ -75,7 +75,7 @@
 {{ acm.head2 }}
 <br>
 Website -
-<a href="{{ acm.web }}" style="color:white; font-weight: 600;" target="_blank">pesitsouthacm.org</a>
+<a href="{{ acm.web }}" style="color:white; font-weight: 600;" target="_blank">{{acm.web}}</a>
 </div>
 </div>
 </div>
@@ -184,7 +184,7 @@ Register
 {{ ieee.head2 }}
 <br>
 Website -
-<a href="{{ ieee.web }}" style="color:white; font-weight: 600;" target="_blank">pesitieee.esy.es</a>
+<a href="{{ ieee.web }}" style="color:white; font-weight: 600;" target="_blank">{{ieee.web}}</a>
 </div>
 </div><br>
 Register
@@ -235,6 +235,184 @@ Register
 
 	<hr>
 	<img src="{{ieee.image2.url}}" class="img-responsive" style="height:500px">
+	</div></div>
+		</div><!-- /container -->
+	</div><!-- /slide4 -->
+
+
+
+
+	<div class="slide story" id="slide-8" data-slide="8">
+		<div class="container">
+			<div class="row title-row">
+				<div class="col-12 font-semibold">Avions</div>
+			</div><!-- /row -->
+			<div class="row line-row">
+				<div class="hr">&nbsp;</div>
+			</div><!-- /row -->
+			<br>
+			<br>
+			<br>
+			<div class="row">
+<div class="col-sm-6">
+<div class="font-light font22 text-left">
+{{ avions.para1 }}
+<br>
+<br>
+{{ avions.para2 }}
+</div>
+
+</div>
+<div class="col-sm-6 font-semibold font22">
+	<div class="font-semibold font22">
+	Contact us
+	<hr>
+<div class="text-left">
+	{{ avions.head1 }}
+<br>
+{{ avions.head2 }}
+<br>
+Website -
+<a href="{{ avions.web }}" style="color:white; font-weight: 600;" target="_blank">{{avions.web}}</a>
+</div>
+</div><br>
+Register
+<hr>
+<div id="avionssuccess" class="font-semibold font22"></div>
+        <form action="{% url 'studenthub:avionscontact' %}" method="POST" id="avionscontact">
+{% csrf_token %}
+            <div class="group">
+                <input type="text" id="avionsname" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Name</label>
+            </div>
+
+            <div class="group">
+                <input type="email" id="avionsemail" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Email</label>
+            </div>
+
+            <div class="group">
+                <input type="text" id="avionsphone" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Mobile No</label>
+            </div>
+
+            <div class="group">
+                <input type="text" id="avionsmessage" value = "'I would love to register.'" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Message</label>
+            </div>
+            <div class="group">
+                <center> <button type="submit" class="btn btn-lg btncontact btn-block" id="avionssend">Send <span class="glyphicon glyphicon-send"></span></button></center>
+            </div>
+        </form>
+</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-sm-6"><span class="font-semibold font22" ></span>
+	<hr>
+	<img src="{{avions.image1.url}}" class="img-responsive" style="height:500px">
+	</div>
+	<div class="col-sm-6"><span class="font-semibold font22"></span>
+
+	<hr>
+	<img src="{{avions.image2.url}}" class="img-responsive" style="height:500px">
+	</div></div>
+		</div><!-- /container -->
+	</div><!-- /slide4 -->
+
+
+
+
+	<div class="slide story" id="slide-9" data-slide="9">
+		<div class="container">
+			<div class="row title-row">
+				<div class="col-12 font-semibold">Enigma</div>
+			</div><!-- /row -->
+			<div class="row line-row">
+				<div class="hr">&nbsp;</div>
+			</div><!-- /row -->
+			<br>
+			<br>
+			<br>
+			<div class="row">
+<div class="col-sm-6">
+<div class="font-light font22 text-left">
+{{ enigma.para1 }}
+<br>
+<br>
+{{ enigma.para2 }}
+</div>
+
+</div>
+<div class="col-sm-6 font-semibold font22">
+	<div class="font-semibold font22">
+	Contact us
+	<hr>
+<div class="text-left">
+	{{ enigma.head1 }}
+<br>
+{{ enigma.head2 }}
+<br>
+Website -
+<a href="{{ enigma.web }}" style="color:white; font-weight: 600;" target="_blank">{{enigma.web}}</a>
+</div>
+</div><br>
+Register
+<hr>
+<div id="enigmasuccess" class="font-semibold font22"></div>
+        <form action="{% url 'studenthub:enigmacontact' %}" method="POST" id="enigmacontact">
+{% csrf_token %}
+            <div class="group">
+                <input type="text" id="enigmaname" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Name</label>
+            </div>
+
+            <div class="group">
+                <input type="email" id="enigmaemail" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Email</label>
+            </div>
+
+            <div class="group">
+                <input type="text" id="enigmaphone" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Mobile No</label>
+            </div>
+
+            <div class="group">
+                <input type="text" id="enigmamessage" value = "'I would love to register.'" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Message</label>
+            </div>
+            <div class="group">
+                <center> <button type="submit" class="btn btn-lg btncontact btn-block" id="enigmasend">Send <span class="glyphicon glyphicon-send"></span></button></center>
+            </div>
+        </form>
+</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-sm-6"><span class="font-semibold font22" ></span>
+	<hr>
+	<img src="{{enigma.image1.url}}" class="img-responsive" style="height:500px">
+	</div>
+	<div class="col-sm-6"><span class="font-semibold font22"></span>
+
+	<hr>
+	<img src="{{enigma.image2.url}}" class="img-responsive" style="height:500px">
 	</div></div>
 		</div><!-- /container -->
 	</div><!-- /slide4 -->
